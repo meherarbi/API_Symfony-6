@@ -21,7 +21,9 @@ use Symfony\Component\Serializer\Annotation\Groups;
         'controller'=>RandomMovie::class,
         'path'=>'/movies/random',
         'method' =>Request::METHOD_GET,
-        'pagination_enabled' =>false
+        'output' =>Movie::class,
+        'pagination_enabled' =>false,
+        'normalization_context' =>['groups'=>['item']]
         ]
 
         
